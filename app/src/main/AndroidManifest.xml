@@ -9,13 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VacationProject2">
-        <activity android:name=".MainActivity">
+        <activity android:name=".main.CreateActivity"></activity>
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".main.SeeMoreActivity" />
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".main.MainActivity" />
     </application>
 
 </manifest>
