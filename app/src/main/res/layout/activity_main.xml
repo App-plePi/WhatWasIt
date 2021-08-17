@@ -7,35 +7,30 @@
 
     </data>
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f1f2f3"
+        android:background="#ffffff"
         tools:context=".main.MainActivity">
 
-        <EditText
-            android:id="@+id/searchEdit"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:paddingLeft="15dp"
-            android:layout_margin="24dp"
-            android:background="@drawable/edit_background2"
-            android:hint="검색"
-            android:elevation="3dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            tools:listitem="@layout/recycler_item"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_recycler"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchEdit"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabAdd"
@@ -72,10 +67,12 @@
             app:maxImageSize="17dp"
             android:layout_margin="24dp"
             android:backgroundTint="#A07FFF"
-            android:src="@drawable/plus_icon"
+            android:src="@drawable/plus_icon1"
             app:tint="#ffffff"
             app:borderWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 </layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="commentData"
+            type="com.example.vacationproject2.main.CommentData" />
+        
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:minHeight="50dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="3dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileCard"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_vertical"
+            app:cardCornerRadius="100dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#f5f6f8"
+                android:src="@drawable/profile"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/commentBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_background2"
+            android:elevation="3dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/notosanskrm"
+                android:includeFontPadding="false"
+                android:text=""
+                android:textColor="#a07fff"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/commentBox"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:fontFamily="@font/notosanskrm"
+                android:includeFontPadding="false"
+                android:text="@{commentData.comment}"
+                android:textColor="#3d3d3d"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/nickname"
+                app:layout_constraintTop_toBottomOf="@id/nickname"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

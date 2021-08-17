@@ -4,12 +4,11 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:minHeight="185dp"
     android:layout_marginRight="24dp"
     android:layout_marginTop="24dp"
     android:layout_marginLeft="24dp"
     android:background="@drawable/edit_background1"
-    android:elevation="3dp">
+    android:elevation="6dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profileCard"
@@ -45,23 +44,27 @@
         app:layout_constraintStart_toEndOf="@id/profileCard"
         app:layout_constraintTop_toTopOf="@id/profileCard"
         />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/keywordList"
+        android:id="@+id/keywordRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="15dp"
         app:layout_constraintBottom_toTopOf="@id/contents"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nickname"/>
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nickname"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/contents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="15dp"
         android:text="contents"
@@ -72,31 +75,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"/>
+        app:layout_constraintTop_toBottomOf="@id/nickname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"/>
 
-    <ImageButton
-        android:id="@+id/heartButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="7dp"
-        android:background="#00000000"
-        android:src="@drawable/heart_icon1"
-        app:layout_constraintBottom_toBottomOf="@id/heart"
-        app:layout_constraintEnd_toStartOf="@id/heart"
-        app:layout_constraintTop_toTopOf="@id/heart"/>
-
-    <TextView
-        android:id="@+id/heart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="12dp"
-        android:text="0"
-        android:textSize="14sp"
-        android:fontFamily="@font/notosanskrm"
-        android:includeFontPadding="false"
-        android:textColor="#3d3d3d"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

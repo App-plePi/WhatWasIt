@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f1f2f3"
+        android:background="#ffffff"
         tools:context=".login.RegisterActivity">
 
         <androidx.cardview.widget.CardView
@@ -18,7 +18,7 @@
             android:layout_height="124dp"
             android:layout_marginTop="65dp"
             app:cardCornerRadius="62dp"
-            android:elevation="6dp"
+            app:cardElevation="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
             android:id="@+id/nicknameEdit"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginRight="10dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="80dp"
             android:background="@drawable/edit_background1"
@@ -47,14 +47,30 @@
             android:textSize="16sp"
             android:textColor="#3d3d3d"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/checkButton"
             app:layout_constraintTop_toBottomOf="@id/profileCard" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/edit_background1"
+            android:text="중복확인"
+            android:textSize="14sp"
+            android:fontFamily="@font/notosanskrm"
+            android:includeFontPadding="false"
+            android:textColor="#3d3d3d"
+            app:layout_constraintBottom_toBottomOf="@id/nicknameEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/nicknameEdit"/>
+
         <TextView
+            android:id="@+id/nicknameLimit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="3~8자의 닉네임"
+            android:text="2~12자의 닉네임"
             android:textSize="12sp"
             android:fontFamily="@font/notosanskrm"
             android:includeFontPadding="false"
